@@ -45,10 +45,9 @@ main{
 }
 
 input{
-    width: 40px;
+    width: 45px;
 }
 
 .normalize .outputs input{
     width: 140px;
 }
-
