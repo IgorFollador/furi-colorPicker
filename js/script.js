@@ -1,10 +1,24 @@
-//Converte hexadecimal para RGB (retorna um array[r, g, b])
+//This file has all functions for convertion between colors values
+
+function normalizeRGB (r, g, b) {
+    r = parseInt(r);
+    g = parseInt(g);
+    b = parseInt(b);
+    
+    var red = r / (r + g + b);
+    var green = g / (r + g + b);
+    var blue = b / (r + g + b);
+    
+    if (r == 0 && g == 0 && b == 0) red = green = blue = 0;
+
+    return [red, green, blue];
+}
+
 function hexToRgb (hex) {
     return hex.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i,(m, r, g, b) => '#' + r + r + g + g + b + b)
     .substring(1).match(/.{2}/g).map(x => parseInt(x, 16));
 }
 
-//Converte hexadecimal para HSV (retorna um array[h, s, v])
 function hexToHsv (hex) {
     var rgb = hexToRgb(hex);
     var hsv = rgbToHsv(rgb[0], rgb[1], rgb[2]);
@@ -15,7 +29,6 @@ function hexToHsv (hex) {
     return [h, s, v];
 }
 
-//Converte hexadecimal para CMYK (retorna um array[c, m, y, k])
 function hexToCmyk (hex) {
     var rgb = hexToRgb(hex);
     var cmyk = rgbToCmyk(rgb[0], rgb[1], rgb[2]);
@@ -27,7 +40,6 @@ function hexToCmyk (hex) {
     return [c, m, y, k];
 }
 
-//Converte RGB para hexadecimal (retorna uma string)
 function rgbToHex (r, g, b) {
     r = parseInt(r).toString(16);
     g = parseInt(g).toString(16);
@@ -47,22 +59,6 @@ function rgbToHex (r, g, b) {
     return hex;
 }
 
-//Normaliza a cor RGB (retorna um array com as cores normalizadas)
-function normalizeRGB (r, g, b) {
-    r = parseInt(r);
-    g = parseInt(g);
-    b = parseInt(b);
-    
-    var red = r / (r + g + b);
-    var green = g / (r + g + b);
-    var blue = b / (r + g + b);
-    
-    if (r == 0 && g == 0 && b == 0) red = green = blue = 0;
-
-    return [red, green, blue];
-}
-
-//Converte RGB para HSV (retorna um array)
 function rgbToHsv (r, g, b) {
     r /= 255;
     g /= 255;
@@ -93,7 +89,6 @@ function rgbToHsv (r, g, b) {
     return [h, s, v]
 }
 
-//Converte RGB para CMYK (retorna um array)
 function rgbToCmyk (r, g, b) {
     r /= 255;
     g /= 255;
@@ -115,7 +110,6 @@ function rgbToCmyk (r, g, b) {
     return [c, m, y, k];
 }
 
-//Converte HSV para RGB (retorna um array)
 function hsvToRgb (h, s, v) {
     s /= 100;
     v /= 100;
@@ -151,7 +145,6 @@ function hsvToRgb (h, s, v) {
    return [r, g, b]
 }
 
-//Converte CMYK para RGB (retorna um array)
 function cmykToRgb (c, m, y, k) {
     var r = Math.round(255 * (1 - c / 100) * (1 - k / 100));
     var g = Math.round(255 * (1 - m / 100) * (1 - k / 100));
@@ -160,7 +153,6 @@ function cmykToRgb (c, m, y, k) {
     return [r,g,b];
 }
 
-//Converte RGB para tons de cinza (retorna um valor)
 function rgbToGray (r, g, b) {
     return gray = Math.round((r + g + b) / 3);
 }
