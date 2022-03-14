@@ -24,75 +24,153 @@
                 <div class="col-sm">
                     <h2 class="mb-4">INPUT</h2>
                     <div class="div-input mb-3">
-                        <label for="norm-picker">Picker</label>
-                        <input type="color" class="picker" id="norm-picker" value="#1633C5">
+                        <label for="norm-picker-in">Picker</label>
+                        <input type="color" class="picker" id="norm-picker-in" value="#0033FF">
                     </div>
                     <div class="div-input mb-3">
-                        <label for="norm-red">Red</label>
-                        <input type="text" id="norm-red" class="inpt-text" maxlength="3">
-                    </div>
-                    <div class="div-input mb-3">
-                        <label for="norm-green">Green</label>
-                        <input type="text" id="norm-green" class="inpt-text" maxlength="3">
-                    </div>
-                    <div class="div-input mb-3">
-                        <label for="norm-blue">Blue</label>
-                        <input type="text" id="norm-blue" class="inpt-text" maxlength="3">
+                        <label for="norm-red-in">Red</label>
+                        <input type="text" id="norm-red-in" class="inpt-text" maxlength="3">
+                
+                        <label for="norm-green-in">Green</label>
+                        <input type="text" id="norm-green-in" class="inpt-text" maxlength="3">
+                    
+                        <label for="norm-blue-in">Blue</label>
+                        <input type="text" id="norm-blue-in" class="inpt-text" maxlength="3">
                     </div>
                 </div>
-                <div class="col-sm output">
+                <div class="col-sm outputs">
                     <h2 class="mb-4">OUTPUT</h2>
-                    <div class="div-input mb-3 output" >
-                        <label for="norm-red-response">Red</label>
-                        <input type="text" id="norm-red-response" readonly=“true”>
+                    <div class="div-input mb-3" >
+                        <label for="norm-red-out">Red</label>
+                        <input type="text" id="norm-red-out" readonly=“true”>
                     </div>
                     <div class="div-input mb-3">
-                        <label for="norm-green-response">Green</label>
-                        <input type="text" id="norm-green-response" readonly=“true”>
+                        <label for="norm-green-out">Green</label>
+                        <input type="text" id="norm-green-out" readonly=“true”>
                     </div>
                     <div class="div-input mb-3">
-                        <label for="norm-blue-response">Blue</label>
-                        <input type="text" id="norm-blue-response" readonly=“true”>
+                        <label for="norm-blue-out">Blue</label>
+                        <input type="text" id="norm-blue-out" readonly=“true”>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="container normalize mt-5">
-            <h2>Normalize RGB</h2>
+        <div class="container mt-5 rth">
+            <h2>RGB to HSV</h2>
+            <div class="row mt-3">
+                <div class="col-sm">
+                    <h2 class="mb-4">INPUT</h2>
+                    <div class="div-input mb-3">
+                        <label for="rth-picker-in">Picker</label>
+                        <input type="color" class="picker" id="rth-picker-in" value="#FFFFFF">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="rth-red-in">Red</label>
+                        <input type="text" id="rth-red-in" class="inpt-text" maxlength="3">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="rth-green-in">Green</label>
+                        <input type="text" id="rth-green-in" class="inpt-text" maxlength="3">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="rth-blue-in">Blue</label>
+                        <input type="text" id="rth-blue-in" class="inpt-text" maxlength="3">
+                    </div>
+                </div>
+                <div class="col-sm outputs">
+                    <h2 class="mb-4">OUTPUT</h2>
+                    <div class="div-input mb-3" >
+                        <label for="rth-red-out">Hue</label>
+                        <input type="text" id="rth-hue-out" readonly=“true”>
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="rth-green-out">Saturation</label>
+                        <input type="text" id="rth-saturation-out" readonly=“true”>
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="rth-blue-out">Value</label>
+                        <input type="text" id="rth-value-out" readonly=“true”>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 htr">
+            <h2>HSV to RGB</h2>
+            <div class="row mt-3">
+                <div class="col-sm">
+                    <h2 class="mb-4">INPUT</h2>
+                    <div class="div-input mb-3">
+                        <label for="htr-picker-in">Picker</label>
+                        <input type="color" class="picker" id="htr-picker-in" value="#FFFFFF">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="htr-hue-in">Hue</label>
+                        <input type="text" id="htr-hue-in" class="inpt-text" maxlength="4">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="htr-saturation-in">Saturation</label>
+                        <input type="text" id="htr-saturation-in" class="inpt-text" maxlength="4">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="htr-value-in">Value</label>
+                        <input type="text" id="htr-value-in" class="inpt-text" maxlength="4">
+                    </div>
+                </div>
+                <div class="col-sm outputs">
+                    <h2 class="mb-4">OUTPUT</h2>
+                    <div class="div-input mb-3" >
+                        <label for="htr-red-out">Red</label>
+                        <input type="text" id="htr-red-out" readonly=“true”>
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="htr-green-out">Green</label>
+                        <input type="text" id="htr-green-out" readonly=“true”>
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="htr-blue-out">Blue</label>
+                        <input type="text" id="htr-blue-out" readonly=“true”>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <h2>RGB to CMYK</h2>
             <div class="row mt-3">
                 <div class="col-sm">
                     <h2 class="mb-4">INPUT</h2>
                     <div class="div-input mb-3">
                         <label for="norm-picker">Picker</label>
-                        <input type="color" class="picker" id="norm-picker" value="#1633C5">
+                        <input type="color" class="picker" id="rtc-picker" value="#FFFFFF">
                     </div>
                     <div class="div-input mb-3">
                         <label for="norm-red">Red</label>
-                        <input type="text" id="norm-red" class="inpt-text" maxlength="3">
+                        <input type="text" id="rtc-red-in" class="inpt-text" maxlength="3">
                     </div>
                     <div class="div-input mb-3">
                         <label for="norm-green">Green</label>
-                        <input type="text" id="norm-green" class="inpt-text" maxlength="3">
+                        <input type="text" id="rtc-green-in" class="inpt-text" maxlength="3">
                     </div>
                     <div class="div-input mb-3">
                         <label for="norm-blue">Blue</label>
-                        <input type="text" id="norm-blue" class="inpt-text" maxlength="3">
+                        <input type="text" id="rtc-blue-in" class="inpt-text" maxlength="3">
                     </div>
                 </div>
-                <div class="col-sm output">
+                <div class="col-sm outputs">
                     <h2 class="mb-4">OUTPUT</h2>
-                    <div class="div-input mb-3 output" >
-                        <label for="norm-red-response">Red</label>
-                        <input type="text" id="norm-red-response" readonly=“true”>
+                    <div class="div-input mb-3" >
+                        <label for="rtc-red-out">Red</label>
+                        <input type="text" id="rtc-hue-out" readonly=“true”>
                     </div>
                     <div class="div-input mb-3">
                         <label for="norm-green-response">Green</label>
-                        <input type="text" id="norm-green-response" readonly=“true”>
+                        <input type="text" id="htr-saturation-out" readonly=“true”>
                     </div>
                     <div class="div-input mb-3">
                         <label for="norm-blue-response">Blue</label>
-                        <input type="text" id="norm-blue-response" readonly=“true”>
+                        <input type="text" id="htr-value-out" readonly=“true”>
                     </div>
                 </div>
             </div>
@@ -102,5 +180,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/normalize.js"></script>
+    <script type="text/javascript" src="js/rgbToHsv.js"></script>
+    <script type="text/javascript" src="js/hsvToRgb.js"></script>
+    <script type="text/javascript" src="js/rgbToCmyk.js"></script>
+    <script type="text/javascript" src="js/cmykToRgb.js"></script>
+    <script type="text/javascript" src="js/rgbToGray.js"></script>
+        
 </body>
 </html>
