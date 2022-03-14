@@ -10,7 +10,7 @@ $('#norm-picker-in').blur(() => {
     $('#norm-blue-response').val(normalized[2]);
 });
 
-$('.normalize .div-input .inpt-text').blur(() => {
+$('.normalize .div-input .input-text').blur(() => {
     var r = $('#norm-red-in').val();
     var g = $('#norm-green-in').val();
     var b = $('#norm-blue-in').val();
@@ -27,12 +27,10 @@ $('.normalize .div-input .inpt-text').blur(() => {
     }
 })
 
-$('.normalize .div-input .inpt-text').keydown(function () {
-    setTimeout(function () {
-        $('#norm-red-in').val($('#norm-red-in').val().replace(/[^0-9]/g,''));
-        $('#norm-green-in').val($('#norm-green-in').val().replace(/[^0-9]/g,''));
-        $('#norm-blue-in').val($('#norm-blue-in').val().replace(/[^0-9]/g,''));
-    }, .01)
+$('.normalize .div-input .input-text').keydown(function () {
+    $('#norm-red-in').val($('#norm-red-in').val().replace(/[^0-9]/g,''));
+    $('#norm-green-in').val($('#norm-green-in').val().replace(/[^0-9]/g,''));
+    $('#norm-blue-in').val($('#norm-blue-in').val().replace(/[^0-9]/g,''));
 });
 
 //Controller all inputs and outputs for RGB to HSV
@@ -47,7 +45,7 @@ $('#rth-picker-in').blur(() => {
     $('#rth-value-response').val(hsv[2]);
 });
 
-$('.rth .div-input .inpt-text').blur(() => {
+$('.rth .div-input .input-text').blur(() => {
     var r = $('#rth-red-in').val();
     var g = $('#rth-green-in').val();
     var b = $('#rth-blue-in').val();
@@ -64,12 +62,10 @@ $('.rth .div-input .inpt-text').blur(() => {
     }
 })
 
-$('.rth .div-input .inpt-text').keydown(function () {
-    setTimeout(function () {
-        $('#rth-red-in').val($('#rth-red-in').val().replace(/[^0-9]/g,''));
-        $('#rth-green-in').val($('#rth-green-in').val().replace(/[^0-9]/g,''));
-        $('#rth-blue-in').val($('#rth-blue-in').val().replace(/[^0-9]/g,''));
-    }, .01)
+$('.rth .div-input .input-text').keydown(function () {
+    $('#rth-red-in').val($('#rth-red-in').val().replace(/[^0-9]/g,''));
+    $('#rth-green-in').val($('#rth-green-in').val().replace(/[^0-9]/g,''));
+    $('#rth-blue-in').val($('#rth-blue-in').val().replace(/[^0-9]/g,''));
 });
 
 //Controller all inputs and outputs for HSV to RGB
@@ -84,7 +80,7 @@ $('#htr-picker-in').blur(() => {
     $('#htr-blue-out').val(rgb[2]);
 });
 
-$('.htr .div-input .inpt-text').blur(() => {
+$('.htr .div-input .input-text').blur(() => {
     var h = $('#htr-hue-in').val();
     var s = $('#htr-saturation-in').val();
     var v = $('#htr-value-in').val();
@@ -101,7 +97,7 @@ $('.htr .div-input .inpt-text').blur(() => {
     }
 })
 
-$('.htr .div-input .inpt-text').keydown(function () {
+$('.htr .div-input .input-text').keydown(function () {
     setTimeout(function () {
         $('#htr-hue-in').val($('#htr-hue-in').val().replace(/[^0-9]/g,''));
         $('#htr-saturation-in').val($('#htr-saturation-in').val().replace(/[^0-9]/g,''));
@@ -122,7 +118,7 @@ $('#rtc-picker-in').blur(() => {
     $('#rtc-black-out').val(cmyk[3]);
 });
 
-$('.rtc .div-input .inpt-text').blur(() => {
+$('.rtc .div-input .input-text').blur(() => {
     var r = $('#rtc-red-in').val();
     var g = $('#rtc-green-in').val();
     var b = $('#rtc-blue-in').val();
@@ -140,7 +136,7 @@ $('.rtc .div-input .inpt-text').blur(() => {
     }
 })
 
-$('.rtc .div-input .inpt-text').keydown(function () {
+$('.rtc .div-input .input-text').keydown(function () {
     setTimeout(function () {
         $('#rtc-red-in').val($('#rtc-red-in').val().replace(/[^0-9]/g,''));
         $('#rtc-green-in').val($('#rtc-green-in').val().replace(/[^0-9]/g,''));
@@ -161,7 +157,7 @@ $('#ctr-picker-in').blur(() => {
     $('#ctr-blue-out').val(cmyk[2]);
 });
 
-$('.ctr .div-input .inpt-text').blur(() => {
+$('.ctr .div-input .input-text').blur(() => {
     var c = $('#ctr-cyan-in').val();
     var m = $('#ctr-magenta-in').val();
     var y = $('#ctr-yellow-in').val();
@@ -180,7 +176,7 @@ $('.ctr .div-input .inpt-text').blur(() => {
     }
 })
 
-$('.ctr .div-input .inpt-text').keydown(function () {
+$('.ctr .div-input .input-text').keydown(function () {
     setTimeout(function () {
         $('#ctr-cyan-in').val($('#ctr-cyan-in').val().replace(/[^0-9]/g,''));
         $('#ctr-magenta-in').val($('#ctr-magenta-in').val().replace(/[^0-9]/g,''));
@@ -201,7 +197,7 @@ $('#rtg-picker-in').blur(() => {
     $('#rtg-grayScale-out').val(gray);
 });
 
-$('.rtg .div-input .inpt-text').blur(() => {
+$('.rtg .div-input .input-text').blur(() => {
     var r = $('#rtg-red-in').val();
     var g = $('#rtg-green-in').val();
     var b = $('#rtg-blue-in').val();
@@ -221,7 +217,7 @@ $('.rtg .div-input .inpt-text').blur(() => {
     }
 })
 
-$('.rtg .div-input .inpt-text').keydown(function () {
+$('.rtg .div-input .input-text').keydown(function () {
     setTimeout(function () {
         $('#rtg-red-in-in').val($('#rtg-red-in').val().replace(/[^0-9]/g,''));
         $('#rtg-green-in').val($('#rtg-green-in').val().replace(/[^0-9]/g,''));
