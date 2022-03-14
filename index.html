@@ -25,7 +25,7 @@
                     <h2 class="mb-4">INPUT</h2>
                     <div class="div-input mb-3">
                         <label for="norm-picker-in">Picker</label>
-                        <input type="color" class="picker" id="norm-picker-in" value="#0033FF">
+                        <input type="color" class="picker" id="norm-picker-in" value="#B40000">
                     </div>
                     <div class="div-input mb-3">
                         <label for="norm-red-in">Red</label>
@@ -63,7 +63,7 @@
                     <h2 class="mb-4">INPUT</h2>
                     <div class="div-input mb-3">
                         <label for="rth-picker-in">Picker</label>
-                        <input type="color" class="picker" id="rth-picker-in" value="#FFFFFF">
+                        <input type="color" class="picker" id="rth-picker-in" value="#B40000">
                     </div>
                     <div class="div-input mb-3">
                         <label for="rth-red-in">Red</label>
@@ -103,7 +103,7 @@
                     <h2 class="mb-4">INPUT</h2>
                     <div class="div-input mb-3">
                         <label for="htr-picker-in">Picker</label>
-                        <input type="color" class="picker" id="htr-picker-in" value="#FFFFFF">
+                        <input type="color" class="picker" id="htr-picker-in" value="#B40000">
                     </div>
                     <div class="div-input mb-3">
                         <label for="htr-hue-in">Hue</label>
@@ -136,41 +136,121 @@
             </div>
         </div>
 
-        <div class="container mt-5">
+        <div class="container mt-5 rtc">
             <h2>RGB to CMYK</h2>
             <div class="row mt-3">
                 <div class="col-sm">
                     <h2 class="mb-4">INPUT</h2>
                     <div class="div-input mb-3">
-                        <label for="norm-picker">Picker</label>
-                        <input type="color" class="picker" id="rtc-picker" value="#FFFFFF">
+                        <label for="rtc-picker-in">Picker</label>
+                        <input type="color" class="picker" id="rtc-picker-in" value="#B40000">
                     </div>
                     <div class="div-input mb-3">
-                        <label for="norm-red">Red</label>
+                        <label for="rtc-red-in">Red</label>
                         <input type="text" id="rtc-red-in" class="inpt-text" maxlength="3">
                     </div>
                     <div class="div-input mb-3">
-                        <label for="norm-green">Green</label>
+                        <label for="rtc-green-in">Green</label>
                         <input type="text" id="rtc-green-in" class="inpt-text" maxlength="3">
                     </div>
                     <div class="div-input mb-3">
-                        <label for="norm-blue">Blue</label>
+                        <label for="rtc-blue-in">Blue</label>
                         <input type="text" id="rtc-blue-in" class="inpt-text" maxlength="3">
                     </div>
                 </div>
                 <div class="col-sm outputs">
                     <h2 class="mb-4">OUTPUT</h2>
                     <div class="div-input mb-3" >
-                        <label for="rtc-red-out">Red</label>
-                        <input type="text" id="rtc-hue-out" readonly=“true”>
+                        <label for="rtc-cyan-out">Cyan</label>
+                        <input type="text" id="rtc-cyan-out" readonly=“true”>
                     </div>
                     <div class="div-input mb-3">
-                        <label for="norm-green-response">Green</label>
-                        <input type="text" id="htr-saturation-out" readonly=“true”>
+                        <label for="rtc-magenta-out">Magenta</label>
+                        <input type="text" id="rtc-magenta-out" readonly=“true”>
                     </div>
                     <div class="div-input mb-3">
-                        <label for="norm-blue-response">Blue</label>
-                        <input type="text" id="htr-value-out" readonly=“true”>
+                        <label for="rtc-yellow-out">Yellow</label>
+                        <input type="text" id="rtc-yellow-out" readonly=“true”>
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="rtc-black-out">Black</label>
+                        <input type="text" id="rtc-black-out" readonly=“true”>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 ctr">
+            <h2>CMYK to RGB</h2>
+            <div class="row mt-3">
+                <div class="col-sm">
+                    <h2 class="mb-4">INPUT</h2>
+                    <div class="div-input mb-3">
+                        <label for="ctr-picker-in">Picker</label>
+                        <input type="color" class="picker" id="ctr-picker-in" value="#B40000">
+                    </div>
+                    <div class="div-input mb-3" >
+                        <label for="ctr-cyan-in">Cyan</label>
+                        <input type="text" id="ctr-cyan-in" maxlength="3">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="ctr-magenta-in">Magenta</label>
+                        <input type="text" id="ctr-magenta-in" maxlength="3">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="ctr-yellow-in">Yellow</label>
+                        <input type="text" id="ctr-yellow-in" maxlength="3">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="ctr-black-in">Black</label>
+                        <input type="text" id="ctr-black-in" maxlength="3">
+                    </div>
+                </div>
+                <div class="col-sm outputs">
+                    <h2 class="mb-4">OUTPUT</h2>
+                    <div class="div-input mb-3">
+                        <label for="ctr-red-in">Red</label>
+                        <input type="text" id="ctr-red-out" class="inpt-text" readonly=“true”>
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="ctr-green-out">Green</label>
+                        <input type="text" id="ctr-green-out" class="inpt-text"readonly=“true”>
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="ctr-blue-out">Blue</label>
+                        <input type="text" id="ctr-blue-out" class="inpt-text" readonly=“true”>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5 rtg">
+            <h2>RGB to Gray Scale</h2>
+            <div class="row mt-3">
+                <div class="col-sm">
+                    <h2 class="mb-4">INPUT</h2>
+                    <div class="div-input mb-3">
+                        <label for="rtg-picker-in">Picker</label>
+                        <input type="color" class="picker" id="rtg-picker-in" value="#B40000">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="rtg-red-in">Red</label>
+                        <input type="text" id="rtg-red-in" class="inpt-text" maxlength="3">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="rtg-green-in">Green</label>
+                        <input type="text" id="rtg-green-in" class="inpt-text" maxlength="3">
+                    </div>
+                    <div class="div-input mb-3">
+                        <label for="rtg-blue-in">Blue</label>
+                        <input type="text" id="rtg-blue-in" class="inpt-text" maxlength="3">
+                    </div>
+                </div>
+                <div class="col-sm outputs">
+                    <h2 class="mb-4">OUTPUT</h2>
+                    <div class="div-input mb-3" >
+                        <label for="rtg-grayScale-out">Gray Scale</label>
+                        <input type="text" id="rtg-grayScale-out" readonly=“true”>
                     </div>
                 </div>
             </div>
@@ -188,7 +268,7 @@
     <script type="text/javascript" src="js/hsvToRgb.js"></script>
     <script type="text/javascript" src="js/rgbToCmyk.js"></script>
     <script type="text/javascript" src="js/cmykToRgb.js"></script>
-    <script type="text/javascript" src="js/rgbToGray.js"></script>
+    <script type="text/javascript" src="js/rgbToGrayScale.js"></script>
         
 </body>
 </html>
