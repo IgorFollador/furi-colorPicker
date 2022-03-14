@@ -2,7 +2,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding-bottom: 50px;
 }
 
 header{
@@ -50,4 +49,8 @@ input{
 
 .normalize .outputs input{
     width: 140px;
+}
+
+.copyright {
+    padding: 28px 0;
 }
